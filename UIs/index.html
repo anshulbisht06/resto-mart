@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="app" ng-cloak>
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properties -->
+  <title>Admin Login</title>
+
+  <link rel="stylesheet" type="text/css" href="bower_components/semantic/dist/semantic.min.css">
+  <link type="text/css" rel="stylesheet" href="bower_components/jsgrid/dist/jsgrid.min.css" />
+  <link type="text/css" rel="stylesheet" href="bower_components/jsgrid/dist/jsgrid-theme.min.css" />
+  <link type="text/css" rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <div class="ui container">
+    <div class="ui header container" ui-view="header"></div>
+    <div class="row" style="margin-top:20px;">
+      <div class="column"></div>
+    </div>
+    <div ui-view="content" class="container">
+    </div>
+    <div ui-view="footer" class="container"></div>
+    <div>
+  </div>
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/semantic/dist/semantic.min.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="bower_components/angular-ui-router/release/stateEvents.min.js"></script>
+  <script src="bower_components/angular-recaptcha/release/angular-recaptcha.min.js"></script>
+  <script async src="bower_components/notifyjs/dist/notify.min.js"></script>
+  <script async src="bower_components/jsgrid/dist/jsgrid.min.js"></script>
+  <script async src="bower_components/moment/min/moment.min.js"></script>
+
+  <script async src="js/all.js"></script>
+
+</body>
+
+</html>

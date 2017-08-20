@@ -1,0 +1,127 @@
+<div class="ui" ng-controller="ffView">
+  <div class="container" id="ddd">
+    <div class="ui icon message error" ng-show="error">
+      <i class="warning sign icon"></i>
+      <div class="content">
+        <div class="header">
+          Wrong Choice!!!
+        </div>
+        <p></p>
+      </div>
+    </div>
+    <br>
+    <div class="row" ng-show="!error">
+      <div class="ui container" ng-show="v === 'foodcategory'">
+        <button class="ui primary basic button fright" tabindex="0" popup>
+          <i class="icon add circle"></i>
+          Add {{t}}
+        </button>
+
+        <div class="ui popup transition hidden">
+          <div class="row center">
+            <form name="createFoodCategoryForm" ng-submit="add(create)" novalidate>
+              <div class="ui big action input" ng-class="{ 'error': createFoodCategoryForm.name.$touched && createFoodCategoryForm.name.$error.required  }">
+                <input name="name" type="text" placeholder="Enter category name" ng-model="create.category" required>
+                <button class="ui icon button" ng-disabled='createFoodCategoryForm.$invalid' type="submit"><i class="icon check circle"></i></button>
+              </div>
+              <!-- <div class="ui pointing red basic label" ng-if="create.error">
+              {{create.error}}
+            </div> -->
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui container" ng-show="v === 'fooditem'">
+      <button class="ui primary basic button fright" tabindex="0" ng-click="openFoodItemModal('#foodItemModal')">
+        <i class="icon add circle"></i>
+        Add {{t}}
+      </button>
+      <div class="ui modal" id="foodItemModal">
+        <i class="close icon"></i>
+        <div class="header">
+          Add food item
+        </div>
+        <div class="image content">
+          <div class="description">
+            <div class="ui header">Fill the necessary fields.</div>
+            <form name="createFoodItemForm" novalidate>
+              <div class="ui form">
+                <div class="ui form">
+                  <div class="three fields">
+                    <div class="field" ng-class="{ 'error': createFoodItemForm.name.$touched && createFoodItemForm.name.$error.required  }">
+                      <label>Name</label>
+                      <input type="text" name="name" placeholder="Name of food item" ng-model="create.name" required>
+                    </div>
+                    <div class="field">
+                      <label>Cuisine</label>
+                      <select class="ui search dropdown" ng-model="create.cuisine">
+                        <option ng-repeat='cuisine in foodConfigs.cuisines' value='{{cuisine}}'>{{cuisine}}</option>
+                      </select>
+                    </div>
+                    <div class="field">
+                      <label>Status</label>
+                      <select class="ui search dropdown" ng-model="create.status">
+                        <option ng-repeat='status in foodConfigs.statuses' value='{{status}}'>{{status}}</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row"><br></div>
+                  <div class="two fields">
+                    <div class="inline field">
+                      <div class="ui toggle checkbox">
+                        <input type="checkbox" tabindex="0" class="hidden" id="isVeg">
+                        <label for="isVeg">Is Vegetarian?</label>
+                      </div>
+                    </div>
+                    <div class="field">
+                      <label>Food Category</label>
+                      <select class="ui search dropdown" ng-model="create.foodCategoryId">
+                        <option ng-repeat='category in allCategories' value='{{category.id}}'>{{category.category}}</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row"><br></div>
+                  <div class="three fields">
+                    <label>Cost against each quantity</label>
+                    <div class="field" ng-repeat="q in foodConfigs.quantities|limitTo:3:1">
+                      <div class="ui left action input">
+                        <button class="ui teal labeled icon button">
+                          <i class="money icon"></i>
+                          {{q}}
+                        </button>
+                        <input type="number" ng-model="create.quantity[q]" step='1' min='0'>
+                      </div><br>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="actions">
+          <div class="ui black deny button">
+            Cancel
+          </div>
+          <div class="ui positive right labeled icon button" ng-show="create.name.length > 2 && create.status.length !== 0 && create.cuisine.length !== 0 && create.foodCategoryId != 0
+            && (create.quantity.Full || create.quantity.Half || create.quantity.Quarter)">
+            Add
+            <i class="checkmark icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row el-gap-btm">
+      <br>
+      <br>
+    </div>
+    <div class="ui labels" ng-if="v === 'fooditem'">
+      <a class="ui">Quantities :&nbsp;</a>
+      <a class="ui label black">Full</a>
+      <a class="ui label brown">Half</a>
+      <a class="ui label white">Quarter</a>
+    </div>
+    <jsgrid id="{{v}}-grid" editing="false"></jsgrid>
+  </div>
+</div>
+</div>

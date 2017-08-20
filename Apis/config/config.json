@@ -1,0 +1,61 @@
+{
+  "development": {
+    "db": {
+      "stores": {
+        "postgres": {
+          "database": "freshmart",
+          "host": "localhost",
+          "dialect": "postgres",
+          "port": 5432,
+          "username": "freshmart",
+          "password": "freshmart007"
+        }
+      },
+
+      "models": {
+        "defaultStore": "postgres",
+        "migrate": "alter"
+      }
+    },
+    "cors": {
+      "origin": [
+        "http://localhost:7000"
+      ],
+      "headers": ["Accept", "Authorization", "Content-Type", "If-None-Match", "Accept-language"]
+    },
+
+    "uiServerUrl": "http://localhost:7000/#!/",
+    "apiServerUrl": "http://localhost:3000/"
+  },
+
+  "production": {
+    "db": {
+      "stores": {
+        "postgres": {
+          "database": "freshmart",
+          "host": "localhost",
+          "dialect": "postgres",
+          "port": 5432,
+          "username": "freshmart",
+          "password": "freshmart007"
+        }
+      },
+
+      "models": {
+        "defaultStore": "postgres",
+        "migrate": "alter"
+      }
+    },
+    "cors": {
+      "origin": [
+        "http://localhost:7000"
+      ],
+      "headers": ["Accept", "Authorization", "Content-Type", "If-None-Match", "Accept-language"]
+    },
+
+    "uiServerUrl": "http://localhost:7000/#!/",
+    "apiServerUrl": "http://localhost:3000/"
+
+  }
+
+}

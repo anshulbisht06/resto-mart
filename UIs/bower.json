@@ -1,0 +1,30 @@
+{
+  "name": "UIs",
+  "description": "UI files (css/js)",
+  "main": "index.html",
+  "authors": [
+    "anshulbisht06 <anshul.bisht06@gmail.com>"
+  ],
+  "license": "Unlicensed",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-cookies": "^1.6.4",
+    "angular-recaptcha": "^4.1.0",
+    "angular-resource": "^1.6.4",
+    "angular-ui-router": "^1.0.4",
+    "angular": "^1.6.4",
+    "notifyjs": "^0.4.2",
+    "semantic": "^2.2.10",
+    "jsgrid": "js-grid#^1.5.3",
+    "moment": "^2.18.1",
+    "jquery": "^3.2.1"
+  }
+}

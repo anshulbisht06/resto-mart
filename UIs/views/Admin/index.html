@@ -1,0 +1,42 @@
+<div class="ui middle aligned center aligned grid" ng-controller='adminIndex' style="margin-top:10%;">
+  <div class="column" style="max-width: 450px;">
+    <h2 class="ui teal image header">
+      <!-- <img src="assets/images/logo.png" class="image"> -->
+      <div class="content">
+        Login to your admin account
+      </div>
+    </h2>
+    <toaster effect='jiggle'></toaster>
+    <form class="ui large form" name="loginForm" ng-submit="login(l, app)" novalidate>
+      <div class="ui stacked segment">
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input type="text" name="email" placeholder="E-mail address" ng-model="l.email" required>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input type="password" name="password" placeholder="Password" ng-model="l.password" required>
+          </div>
+        </div>
+        <div class="field">
+          <apps-dropdown></apps-dropdown>
+          <!-- <div ng-include="'views/includes/apps-dropdown.html'"></div> -->
+        </div>
+        <div class="field">
+          <div vc-recaptcha key="'6Le1tyYUAAAAAHVddn-tEcG5uIkepdYFt3mNIwmL'" ng-model='l.recaptcha' required></div>
+        </div>
+        <button on-create="setWidgetId(widgetId)" on-success="setResponse(response)" on-expire="cbExpiration()" ng-disabled="loginForm.$invalid" class="ui fluid large teal submit button" type="submit">Login</button>
+      </div>
+
+      <div class="ui error message"></div>
+
+    </form>
+<!--
+    <div class="ui message">
+      New to us? <a href="#">Sign Up</a>
+    </div> -->
+  </div>
+</div>

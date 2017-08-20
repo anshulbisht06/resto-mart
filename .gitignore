@@ -1,0 +1,5 @@
+db_commands
+*/node_modules/
+*/bower_components/
+UIs/js/all.min.js
+UIs/js/all.js

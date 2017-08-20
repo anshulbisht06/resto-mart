@@ -1,0 +1,32 @@
+{
+  "name": "UIs",
+  "private": true,
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-banner": "^0.6.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-requirejs": "^1.0.0",
+    "grunt-contrib-uglify": "^2.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-contrib-yuidoc": "^1.0.0",
+    "grunt-minified": "0.0.6",
+    "grunt-mocha-test": "^0.13.2",
+    "grunt-ng-annotate": "^3.0.0",
+    "grunt-ng-constant": "^2.0.1",
+    "grunt-ngmin": "0.0.3",
+    "grunt-nsp-package": "0.0.5",
+    "grunt-retire": "^1.0.7",
+    "grunt-shell": "^2.1.0",
+    "load-grunt-tasks": "^3.5.2",
+    "logfile-grunt": "^0.3.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "bower": "^1.8.0",
+    "express": "^4.15.3",
+    "jquery": "^3.2.1"
+  }
+}

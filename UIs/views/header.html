@@ -1,0 +1,19 @@
+<div class="ui stackable menu" ng-controller='header' style="margin-bottom:10%;">
+  <div class="item">
+    <img ng-src="/images/{{app}}.png">
+  </div>
+  <a ui-sref='admin' class="item">{{ app === 'freshfoods'? 'Fresh Foods': 'RMart' }} </a>
+  <div class="right menu">
+    <!-- <div class="ui dropdown right item">
+      View
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <a class="item">Food Categories</a>
+        <a class="item">Food Items</a>
+      </div>
+    </div> -->
+    <div class="right menu">
+      <a class="item" ng-click='lg()'>Logout</a>
+    </div>
+  </div>
+</div>

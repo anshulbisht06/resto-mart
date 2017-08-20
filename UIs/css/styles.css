@@ -1,0 +1,44 @@
+html, body { height: 100%; margin: 0; }
+div.jsgrid-grid-body{
+    height: 100% !important;
+}
+.fleft {
+  float: left;
+  margin-left: 0.25em;
+}
+.text-center{
+  text-align: center;
+}
+.fright {
+  float: right;
+  margin-right: 0.25em;
+}
+.el-gap-btm{
+  margin-bottom: 30px;
+}
+
+div.stats{
+  width:300px !important;
+  border-radius: 0 !important;
+}
+
+/*@media screen and (min-width: 320px) {
+    .card.same-height {
+        height:430px;
+    }
+    #cards{
+        display: block;
+    }
+    #navbar{
+        display: flex;
+    }
+}*/
+
+@media screen and (max-width: 320px) {
+    #cards{
+        display: none;
+    }
+    #navbar{
+        display: none;
+    }
+}
